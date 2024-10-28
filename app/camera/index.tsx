@@ -9,7 +9,7 @@ const CameraScreen = () => {
     navigation.setOptions({
       headerRight: () => (
         <MenuIconButton
-          onPress={() => router.push('/camera')}
+          onPress={() => router.push('/camera/camera-shutter')}
           icon="camera-outline"
         />
       ),
