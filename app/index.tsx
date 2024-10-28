@@ -18,7 +18,7 @@ const MenuOptions: MenuOption[] = [
   {
     title: 'Gallery',
     icon: 'images-outline',
-    href: '/camera',
+    href: '/gallery',
   },
   {
     title: 'Gallery',
