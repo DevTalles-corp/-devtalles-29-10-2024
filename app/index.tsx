@@ -1,6 +1,6 @@
 import { ThemedText } from '@/components/ThemedText';
 import { Ionicons } from '@expo/vector-icons';
-import { Href, Link } from 'expo-router';
+import { Href } from 'expo-router';
 import {
   View,
   Text,
