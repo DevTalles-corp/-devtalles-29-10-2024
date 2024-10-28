@@ -1,13 +1,7 @@
 import { ThemedText } from '@/components/ThemedText';
 import { Ionicons } from '@expo/vector-icons';
-import { Href } from 'expo-router';
-import {
-  View,
-  Text,
-  FlatList,
-  StyleSheet,
-  TouchableOpacity,
-} from 'react-native';
+import { Href, router } from 'expo-router';
+import { FlatList, StyleSheet, TouchableOpacity } from 'react-native';
 
 interface MenuOption {
   title: string;
@@ -51,7 +45,11 @@ const NativeApp = () => {
       keyExtractor={(item) => item.title}
       numColumns={4}
       renderItem={({ item }) => (
-        <TouchableOpacity style={styles.buttonItem} activeOpacity={0.7}>
+        <TouchableOpacity
+          style={styles.buttonItem}
+          activeOpacity={0.7}
+          onPress={() => router.push(item.href)}
+        >
           <Ionicons name={item.icon} size={32} />
           <ThemedText type="small" style={{ marginVertical: 5 }}>
             {item.title}
